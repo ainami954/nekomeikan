@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ねこカフェ 猫鳴館 ｜ 新潟市江南区・亀田</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ribbon">DESIGN MOCKUP</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img class="mark" src="images/nekomeikan-building-icon-structure-preserved-512-transparent.png" alt="猫鳴館">
+      <div>
+        <span class="name">猫鳴館</span>
+        <span class="sub">NEKO CAFE · KAMEDA</span>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#about">お店について</a>
+      <a href="#cats">猫キャスト</a>
+      <a href="#insta">Instagram</a>
+      <a href="#fb">Facebook</a>
+      <a href="#price">料金</a>
+      <a href="#info">営業案内</a>
+      <a href="#info" class="cta">アクセス</a>
+    </nav>
+    <div class="hamb"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">新潟市江南区 亀田</span>
+      <h1>日常から離れて、<br><span class="b">ゆったり</span>過ごす。</h1>
+      <p class="lead">昭和の喫茶店を改装した、青い屋根のねこカフェ。レトロで落ち着いた店内で、個性ゆたかな猫たちと時間を忘れて過ごせます。</p>
+      <div class="hero-actions">
+        <a href="#info" class="btn btn-primary">営業案内を見る
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#insta" class="btn btn-ghost">Instagramを見る</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <!-- 青い屋根の建物 = signature -->
+      <img class="house" src="images/blue-roof-building-illustration-v4-transparent.png" alt="青い屋根の猫カフェ猫鳴館">
+      <div class="hero-badge">
+        <div class="n">2018<span class="hero-year-unit">年〜</span></div>
+        <div class="l">亀田で、猫と過ごす場所</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="h-sec">喫茶店だった建物を、<br>猫たちのゆりかごに。</h2>
+      <p>もとは町の喫茶店だった建物を、猫がのびのび過ごせるよう、段差のないフラットな空間に改装しました。木のぬくもりとレトロな空気はそのまま。青い屋根が目印です。</p>
+      <p>人に慣れた猫たちが、そっと近づいてきます。漫画を片手に長居するのも、ただ眺めているだけでも。あなたのペースで、猫たちと過ごしてください。</p>
+    </div>
+    <div class="ph reveal" aria-label="店内写真が入ります">
+      <img class="about-photo" src="images/interior03.png" alt="店内の写真">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATS ============ -->
+<section class="cats" id="cats">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <span class="eyebrow eyebrow-center">Cats · 猫キャスト</span>
+      <h2 class="h-sec">今日は、どの子に会えるかな。</h2>
+    </div>
+    <p class="note reveal">※お名前・お写真・性格は、実際の猫キャストに差し替わります（現在 11匹）</p>
+    <div class="cat-grid reveal" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="insta" id="insta">
+  <div class="wrap">
+    <div class="insta-top">
+      <div class="reveal">
+        <span class="eyebrow">Instagram · 写真</span>
+        <h2 class="h-sec">猫たちの“今日”は、<br>Instagramで。</h2>
+        <p class="insta-sub">@nekomeikan の写真が、このページにそのまま流れます。更新の手間なく、サイトはいつも“今日の様子”に。</p>
+      </div>
+      <div class="insta-meta reveal">
+        <div class="m"><div class="n">1,900+</div><div class="l">Followers</div></div>
+        <div class="m"><div class="n">480+</div><div class="l">Posts</div></div>
+      </div>
+    </div>
+    <div id="igFeed" class="reveal"></div>
+    <div class="ig-cta reveal">
+      <a href="https://www.instagram.com/nekomeikan/" data-sns="instagram" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        Instagramで見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACEBOOK ============ -->
+<section class="fb" id="fb">
+  <div class="wrap">
+    <div class="fb-top">
+      <div class="reveal">
+        <span class="eyebrow">Facebook · 動画</span>
+        <h2 class="h-sec">猫たちの動く姿は、<br>Facebookで。</h2>
+        <p class="fb-sub">月に2〜3回、猫たちの動画や休館日のお知らせを更新しています。見つけにくかった発信も、サイトならここにまとめて楽しめます。</p>
+      </div>
+      <div class="reveal"><span class="fb-chip"><span class="pulse"></span>月2〜3回 更新中</span></div>
+    </div>
+    <div class="fb-grid reveal" id="fbGrid"></div>
+    <div class="fb-cta reveal">
+      <a href="https://www.facebook.com/profile.php?id=100063652293277" data-sns="facebook" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z" fill="currentColor"/></svg>
+        Facebookで動画を見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ X / お知らせ ============ -->
+<section class="xsec" id="news">
+  <div class="wrap">
+    <div class="fb-top">
+      <div class="reveal">
+        <span class="eyebrow">X（旧Twitter）· お知らせ</span>
+        <h2 class="h-sec">最新のお知らせは、<br>Xで、いちばん早く。</h2>
+        <p class="fb-sub">月に4回ほど、Xで営業や猫たちの近況をお届けしています。こちらには、大切なお知らせを掲載します。</p>
+      </div>
+      <div class="reveal"><span class="fb-chip"><span class="pulse"></span>3つのSNSで最多・月4回</span></div>
+    </div>
+    <div class="x-grid reveal" id="xGrid"></div>
+    <p class="note reveal news-note">※お知らせは手動で編集・更新できます（下は記入例です）</p>
+    <div class="x-cta reveal">
+      <a href="https://x.com/nekomeikan" data-sns="x" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-7-6.2 7H1.7l8.1-9.3L1 2h7l4.9 6.4L18.9 2zm-2.4 18h1.9L7.6 4H5.6l10.9 16z"/></svg>
+        Xで見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OWNER ============ -->
+<section class="owner">
+  <div class="wrap owner-grid">
+    <div class="ph reveal" aria-label="店主の写真が入ります">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="cap">店主の写真が入ります</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Owner</span>
+      <h2 class="h-sec">料理人から、<br>ねこカフェへ。</h2>
+      <p>店主は、料理人として長く腕をふるってきました。やがて「猫と人が、ともにやすらげる場所をつくりたい」と思い立ち、2018年、この亀田の地に猫鳴館を開きました。</p>
+      <p>一匹一匹の体調や気持ちに寄り添いながら、日々ていねいに向き合っています。</p>
+      <p class="sign">— 猫鳴館 店主 　※文章は下書きです。想いを伺って仕上げます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE ============ -->
+<section class="price" id="price">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <span class="eyebrow eyebrow-center">Price · 料金</span>
+      <h2 class="h-sec">わかりやすい、時間制。</h2>
+    </div>
+    <div class="grid2 reveal">
+      <div class="cell"><div class="pl">平日 ・ 60分</div><div class="pv">¥1,100<small> 〜</small></div></div>
+      <div class="cell"><div class="pl">日曜・祝日 ・ 60分</div><div class="pv">¥1,300<small> 〜</small></div></div>
+      <div class="cell sub"><div class="pl">ドリンク</div><div class="pv">＋¥100<small> 〜</small></div></div>
+      <div class="cell sub"><div class="pl">フリードリンク</div><div class="pv">＋¥300</div></div>
+    </div>
+    <p class="note reveal">※料金は一例です。最新の内容に差し替えます。</p>
+  </div>
+</section>
+
+<!-- ============ INFO / ACCESS ============ -->
+<section class="info" id="info">
+  <div class="wrap">
+    <span class="eyebrow reveal">Information · 営業案内</span>
+    <h2 class="h-sec reveal info-heading">お越しの前に。</h2>
+    <div class="info-grid">
+      <div class="reveal">
+        <dl class="dl">
+          <div class="row"><dt>営業時間</dt><dd>11:00 – 20:00<span class="small">最終入館 19:00</span></dd></div>
+          <div class="row"><dt>定休日</dt><dd>水曜日／第2・第4火曜日</dd></div>
+          <div class="row"><dt>住所</dt><dd>〒950-0152<br>新潟市江南区亀田緑町1-1-6</dd></div>
+          <div class="row"><dt>電話</dt><dd>025-367-3893</dd></div>
+          <div class="row"><dt>アクセス</dt><dd>信越本線「亀田駅」より徒歩12分<span class="small">亀田バイパス「鵜ノ子I.C」より車で4分</span></dd></div>
+        </dl>
+        <div class="notice">
+          中学生未満のお子様はご入館いただけません（貸切メニューをご利用の場合は可）。中学生は保護者同伴でお願いいたします。
+        </div>
+      </div>
+      <div class="ph map-ph reveal" aria-label="地図が入ります">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.4-7-11a7 7 0 1114 0c0 4.6-7 11-7 11z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="cap">地図（Googleマップ）が入ります</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEDIA ============ -->
+<section class="media">
+  <div class="wrap">
+    <span class="eyebrow reveal">As seen in</span>
+    <h2 class="h-sec reveal">メディアにも、<br>取り上げられています。</h2>
+    <div class="media-row reveal">
+      <span class="chip"><b>TeNY</b> にいがた見っけたい</span>
+      <span class="chip"><b>Things</b> 新潟のローカルWebマガジン</span>
+      <span class="chip"><b>ねこのきもち</b> WEB MAGAZINE</span>
+      <span class="chip"><b>猫カフェナビ</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">猫鳴館</div>
+        <p>昭和の喫茶店を改装した、青い屋根のねこカフェ。<br>新潟市江南区亀田で、猫と過ごすゆったりとした時間を。</p>
+      </div>
+      <div class="foot-col">
+        <h4>Information</h4>
+        <p>〒950-0152<br>新潟市江南区亀田緑町1-1-6<br>TEL 025-367-3893<br>11:00–20:00（最終入館19:00）<br>定休：水・第2/第4火</p>
+      </div>
+      <div class="foot-col">
+        <h4>Follow</h4>
+        <p><a href="https://www.instagram.com/nekomeikan/" data-sns="instagram" target="_blank" rel="noopener">Instagram @nekomeikan</a><br><a href="https://www.facebook.com/profile.php?id=100063652293277" data-sns="facebook" target="_blank" rel="noopener">Facebook</a><br><a href="https://x.com/nekomeikan" data-sns="x" target="_blank" rel="noopener">X（旧Twitter）@neKomeiKan</a></p>
+        <p class="license">第一種動物取扱業者標識／種別：展示／登録番号 新動セ(動)第18-05-007号／動物取扱責任者 木村隆志</p>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© nekomeikan. All Rights Reserved.</span>
+      <span>この画面はデザイン確認用のイメージです。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================================================================
+   猫鳴館サイト｜設定エリア（基本ここだけ編集すればOK）
+   ----------------------------------------------------------------
+   ■ Instagram（Behold）
+     1) https://behold.so で無料登録し、店舗のInstagram（※ビジネス
+        アカウントである必要あり）を連携してウィジェットを作成
+     2) 発行される feed-id を beholdFeedId に貼る
+        → 空のままだとサンプルのグリッドが表示されます
+   ■ Facebook 動画
+     載せたい動画投稿のURLを facebookVideos に入れる
+     （例: https://www.facebook.com/nekomeikan/videos/1234567890/ ）
+        → 空の要素はサンプル枠のまま表示されます
+   ■ X（お知らせ）＝手動更新
+     news 配列を編集するだけ。text=本文 / date=日付 / url=投稿リンク(任意)
+   ================================================================ */
+const CONFIG = {
+  beholdFeedId: "",                 // 例: "L7mnQCHvZeMZLbNXmJll"
+  facebookVideos: ["", "", ""],     // FB動画の投稿URLを3本ぶん
+  news: [
+    { text: "本日は通常どおり営業しております。ご来館お待ちしています🐾", date: "2026/08/06", url: "" },
+    { text: "今週の休館日は◯日です。お間違えのないようご確認ください。",   date: "2026/08/03", url: "" },
+    { text: "◯◯ちゃん、お誕生日をむかえました！元気いっぱいです。",       date: "2026/07/30", url: "" },
+  ],
+  instagramUrl: "https://www.instagram.com/nekomeikan/",
+  facebookUrl:  "https://www.facebook.com/profile.php?id=100063652293277",
+  xUrl:         "https://x.com/nekomeikan",
+};
+
+/* ------------------ 以下は通常さわらなくてOK ------------------ */
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+// 猫キャスト（お名前・性格は実データに差し替え）
+const cats = [
+  ["猫キャスト ①","甘えん坊"],["猫キャスト ②","のんびり屋"],["猫キャスト ③","好奇心おうせい"],["猫キャスト ④","マイペース"],
+  ["猫キャスト ⑤","おっとり"],["猫キャスト ⑥","あそび好き"],["猫キャスト ⑦","人なつっこい"],["猫キャスト ⑧","気まぐれ"],
+  ["猫キャスト ⑨","おだやか"],["猫キャスト ⑩","甘え上手"],["猫キャスト ⑪","マイペース"]
+];
+const catSvg = '<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="40" rx="18" ry="15" fill="currentColor"/><circle cx="32" cy="24" r="15" fill="currentColor"/><path d="M18 15l-4-13 12 8zM46 15l4-13-12 8z" fill="currentColor"/><circle cx="26" cy="23" r="2" fill="#f5efdf"/><circle cx="38" cy="23" r="2" fill="#f5efdf"/><path d="M22 30c6 4 14 4 20 0" stroke="#f5efdf" stroke-width="2" stroke-linecap="round"/></svg>';
+document.getElementById('catGrid').innerHTML = cats.map((c,i)=>`
+  <div class="cat-card"><div class="cat-photo">${i < 9
+    ? `<img src="images/card${String(i+1).padStart(2,'0')}.png" alt="${c[0]}のプロフィールカード">`
+    : catSvg}</div>
+  <div class="cat-info"><div class="cn">${c[0]}</div><div class="ct">${c[1]}</div></div></div>`).join('');
+
+// Instagram：Beholdのfeed-idがあればウィジェット、なければサンプルグリッド
+(function(){
+  const host = document.getElementById('igFeed');
+  if (CONFIG.beholdFeedId) {
+    if (!document.getElementById('behold-script')) {
+      const s = document.createElement('script');
+      s.id = 'behold-script'; s.type = 'module'; s.src = 'https://w.behold.so/widget.js';
+      document.head.appendChild(s);
+    }
+    host.innerHTML = `<behold-widget feed-id="${esc(CONFIG.beholdFeedId)}"></behold-widget>`;
+  } else {
+    const igSvg = '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/></svg>';
+    host.classList.add('ig-grid');
+    host.innerHTML = Array.from({length:12}).map(()=>`<div class="ig-tile">${igSvg}</div>`).join('');
+  }
+})();
+
+// Facebook：動画URLがあれば埋め込み、なければサンプル枠
+(function(){
+  const grid = document.getElementById('fbGrid');
+  const playSvg = '<div class="fb-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>';
+  const labels = ['猫たちの様子','お昼寝タイム','じゃれあう二匹'];
+  grid.innerHTML = CONFIG.facebookVideos.map((url,i)=>{
+    if (url && url.trim()) {
+      const src = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(url.trim()) + '&show_text=false&width=560';
+      return `<div class="fb-tile"><iframe src="${src}" class="fb-embed" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>`;
+    }
+    return `<div class="fb-tile">${playSvg}<span class="vlabel">▶ ${labels[i]||'動画'}（サンプル）</span></div>`;
+  }).join('');
+})();
+
+// X：お知らせ（news配列を手動編集）
+(function(){
+  const pawMini = '<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="42" rx="15" ry="12" fill="currentColor"/><ellipse cx="15" cy="26" rx="6" ry="8" fill="currentColor"/><ellipse cx="26" cy="18" rx="6" ry="8.5" fill="currentColor"/><ellipse cx="38" cy="18" rx="6" ry="8.5" fill="currentColor"/><ellipse cx="49" cy="26" rx="6" ry="8" fill="currentColor"/></svg>';
+  document.getElementById('xGrid').innerHTML = CONFIG.news.map(p=>{
+    const body = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" class="x-post-link">${esc(p.text)}</a>` : esc(p.text);
+    return `<div class="x-card">
+      <div class="x-head"><div class="x-av">${pawMini}</div>
+      <div class="x-who"><b>ねこカフェ 猫鳴館</b><span>@neKomeiKan</span></div></div>
+      <div class="x-body">${body}</div>
+      <div class="x-date">${esc(p.date||'')}</div>
+    </div>`;
+  }).join('');
+})();
+
+// 各SNSプロフィールへのリンクを反映
+(function(){
+  const set = (sel,url)=>document.querySelectorAll(sel).forEach(a=>{ if(url) a.href = url; });
+  set('a[data-sns="instagram"]', CONFIG.instagramUrl);
+  set('a[data-sns="facebook"]',  CONFIG.facebookUrl);
+  set('a[data-sns="x"]',         CONFIG.xUrl);
+})();
+
+// スクロールで淡く表示
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ハンバーガー（簡易）
+document.querySelector('.hamb').addEventListener('click',()=>{
+  const m=document.querySelector('.menu');
+  m.classList.toggle('mobile-open');
+});
+</script>
+</body>
+</html>
