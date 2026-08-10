@@ -283,18 +283,38 @@ const CONFIG = {
 /* ------------------ 以下は通常さわらなくてOK ------------------ */
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 
-// 猫キャスト（お名前・性格は実データに差し替え）
+// 猫キャスト（各項目を編集するとカードへ反映されます）
 const cats = [
-  ["猫キャスト ①","甘えん坊"],["猫キャスト ②","のんびり屋"],["猫キャスト ③","好奇心おうせい"],["猫キャスト ④","マイペース"],
-  ["猫キャスト ⑤","おっとり"],["猫キャスト ⑥","あそび好き"],["猫キャスト ⑦","人なつっこい"],["猫キャスト ⑧","気まぐれ"],
-  ["猫キャスト ⑨","おだやか"],["猫キャスト ⑩","甘え上手"],["猫キャスト ⑪","マイペース"]
+  { name:"猫キャスト ①", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat01-portrait.png" },
+  { name:"スピカ", sex:"男の子・去勢済", birthday:"2018年5月28日", breed:"猫の子", note:"保護はいろいろしています。甘えん坊で、すりすりくんです。現在、トライアル中。", image:"images/cat02-portrait.png" },
+  { name:"猫キャスト ③", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat03-portrait.png" },
+  { name:"猫キャスト ④", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat04-portrait.png" },
+  { name:"猫キャスト ⑤", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat05-portrait-ears.png" },
+  { name:"猫キャスト ⑥", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat06-portrait.png" },
+  { name:"猫キャスト ⑦", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat07-portrait.png" },
+  { name:"猫キャスト ⑧", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat08-portrait.png" },
+  { name:"猫キャスト ⑨", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"images/cat09-portrait.png" },
+  { name:"猫キャスト ⑩", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"" },
+  { name:"猫キャスト ⑪", sex:"未登録", birthday:"未登録", breed:"未登録", note:"プロフィール準備中です。", image:"" }
 ];
 const catSvg = '<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="40" rx="18" ry="15" fill="currentColor"/><circle cx="32" cy="24" r="15" fill="currentColor"/><path d="M18 15l-4-13 12 8zM46 15l4-13-12 8z" fill="currentColor"/><circle cx="26" cy="23" r="2" fill="#f5efdf"/><circle cx="38" cy="23" r="2" fill="#f5efdf"/><path d="M22 30c6 4 14 4 20 0" stroke="#f5efdf" stroke-width="2" stroke-linecap="round"/></svg>';
 document.getElementById('catGrid').innerHTML = cats.map((c,i)=>`
-  <div class="cat-card"><div class="cat-photo">${i < 9
-    ? `<img src="images/card${String(i+1).padStart(2,'0')}.png" alt="${c[0]}のプロフィールカード">`
-    : catSvg}</div>
-  <div class="cat-info"><div class="cn">${c[0]}</div><div class="ct">${c[1]}</div></div></div>`).join('');
+  <article class="cat-card">
+    <div class="cat-photo">${c.image
+      ? `<img class="cat-portrait" src="${c.image}" alt="${esc(c.name)}の写真">`
+      : `<div class="cat-photo-placeholder">${catSvg}<span>PHOTO</span></div>`}
+    </div>
+    <div class="cat-info">
+      <h3 class="cat-name">${esc(c.name)}</h3>
+      <dl class="cat-profile">
+        <div><dt>性別</dt><dd>${esc(c.sex)}</dd></div>
+        <div><dt>生年月日</dt><dd>${esc(c.birthday)}</dd></div>
+        <div><dt>猫の種類</dt><dd>${esc(c.breed)}</dd></div>
+      </dl>
+      <p class="cat-note">${esc(c.note)}</p>
+    </div>
+    <img class="cat-frame" src="images/cat-card-frame-overlay.png" alt="" aria-hidden="true">
+  </article>`).join('');
 
 // Instagram：Beholdのfeed-idがあればウィジェット、なければサンプルグリッド
 (function(){
