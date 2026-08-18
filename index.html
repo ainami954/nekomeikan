@@ -274,11 +274,13 @@ const CONFIG = {
     "images/instagram02.webp",
     "images/instagram03.webp",
   ],
-  facebookVideos: ["", "", ""],     // FB動画の投稿URLを3本ぶん
+  facebookVideos: ["https://www.facebook.com/reel/1054400647554992",
+                   "https://www.facebook.com/reel/2068746263737559",
+                   "https://www.facebook.com/reel/1391752706196760"],     // FB動画の投稿URLを3本ぶん
   news: [
-    { text: "本日は通常どおり営業しております。ご来館お待ちしています🐾", date: "2026/08/06", url: "" },
-    { text: "今週の休館日は◯日です。お間違えのないようご確認ください。",   date: "2026/08/03", url: "" },
-    { text: "◯◯ちゃん、お誕生日をむかえました！元気いっぱいです。",       date: "2026/07/30", url: "" },
+    { text: "もずくくん、顔が見えませんが今日は黒猫感謝の日ですよー🐈‍⬛", date: "2026/08/17", url: "https://x.com/neKomeiKan/status/2089208403751260553?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2089208403751260553%7Ctwgr%5Efb46c0bdffdbc7a602f613f27cd6b48b98c5131f%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.x.com%2F%3Furl%3Dhttps%3A%2F%2Ftwitter.com%2FneKomeiKan%2Fstatus%2F2089208403751260553" },
+    { text: "【お盆期間営業のお知らせ】お盆期間中、通常と利用料金が変更になる日がございます🙇🏻‍♀️ご来館の際は、ご確認をお願いいたします。",   date: "2026/08/06", url: "https://x.com/neKomeiKan/status/2085184586087379109?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2085184586087379109%7Ctwgr%5E8bdc62f208a7420a5cc6a87c49a06b4a828db94b%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.x.com%2F%3Furl%3Dhttps%3A%2F%2Ftwitter.com%2FneKomeiKan%2Fstatus%2F2085184586087379109" },
+    { text: "はつねさん、お昼寝中_(　 _ *`ω､)_ *ﾟｽﾔｧ...",       date: "2026/08/02", url: "https://x.com/neKomeiKan/status/2083773786160271431?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2083773786160271431%7Ctwgr%5E93f30e34e3049ea8191cab1668206f1fc6fedc34%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.x.com%2F%3Furl%3Dhttps%3A%2F%2Ftwitter.com%2FneKomeiKan%2Fstatus%2F2083773786160271431" },
   ],
   instagramUrl: "https://www.instagram.com/nekomeikan/",
   facebookUrl:  "https://www.facebook.com/profile.php?id=100063652293277",
@@ -350,11 +352,24 @@ document.getElementById('catGrid').innerHTML = cats.map((c,i)=>`
   const labels = ['猫たちの様子','お昼寝タイム','じゃれあう二匹'];
   grid.innerHTML = CONFIG.facebookVideos.map((url,i)=>{
     if (url && url.trim()) {
-      const src = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(url.trim()) + '&show_text=false&width=560';
-      return `<div class="fb-tile"><iframe src="${src}" class="fb-embed" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>`;
+      return `<div class="fb-tile" data-video-url="${esc(url.trim())}"><iframe class="fb-embed" title="${esc(labels[i]||'Facebook動画')}" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>`;
     }
     return `<div class="fb-tile">${playSvg}<span class="vlabel">▶ ${labels[i]||'動画'}（サンプル）</span></div>`;
   }).join('');
+
+  const fitVideo = tile => {
+    const iframe = tile.querySelector('.fb-embed');
+    const width = Math.max(220,Math.floor(tile.getBoundingClientRect().width));
+    if (!iframe || iframe.dataset.embedWidth === String(width)) return;
+    iframe.dataset.embedWidth = String(width);
+    iframe.src = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(tile.dataset.videoUrl) + '&show_text=false&width=' + width;
+  };
+  const videoTiles = grid.querySelectorAll('.fb-tile[data-video-url]');
+  videoTiles.forEach(fitVideo);
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(entries=>entries.forEach(entry=>fitVideo(entry.target)));
+    videoTiles.forEach(tile=>observer.observe(tile));
+  }
 })();
 
 // X：お知らせ（news配列を手動編集）
