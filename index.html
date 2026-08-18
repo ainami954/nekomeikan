@@ -269,6 +269,11 @@
    ================================================================ */
 const CONFIG = {
   beholdFeedId: "",                 // 例: "L7mnQCHvZeMZLbNXmJll"
+  instagramSampleImages: [          // feed-id未設定時だけ表示する仮画像
+    "images/instagram01.webp",
+    "images/instagram02.webp",
+    "images/instagram03.webp",
+  ],
   facebookVideos: ["", "", ""],     // FB動画の投稿URLを3本ぶん
   news: [
     { text: "本日は通常どおり営業しております。ご来館お待ちしています🐾", date: "2026/08/06", url: "" },
@@ -329,7 +334,12 @@ document.getElementById('catGrid').innerHTML = cats.map((c,i)=>`
   } else {
     const igSvg = '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/></svg>';
     host.classList.add('ig-grid');
-    host.innerHTML = Array.from({length:12}).map(()=>`<div class="ig-tile">${igSvg}</div>`).join('');
+    host.innerHTML = Array.from({length:12}).map((_,i)=>{
+      const src = CONFIG.instagramSampleImages[i];
+      return src
+        ? `<a class="ig-tile" href="${CONFIG.instagramUrl}" target="_blank" rel="noopener" aria-label="Instagramの写真 ${i+1} を見る"><img src="${src}" alt="猫鳴館 Instagram 写真 ${i+1}"></a>`
+        : `<div class="ig-tile">${igSvg}</div>`;
+    }).join('');
   }
 })();
 
