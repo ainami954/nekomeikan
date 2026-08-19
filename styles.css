@@ -235,7 +235,8 @@ section{padding:74px 0;}
 .dl .row dd .small{font-size:12px;color:var(--coffee);display:block;margin-top:2px;}
 .notice{background:var(--cream);border-left:3px solid var(--brass);padding:12px 16px;border-radius:3px;
   font-size:12.5px;color:var(--coffee);margin-top:20px;line-height:1.75;}
-.map-ph{min-height:100%;}
+.map-ph{min-height:450px;padding:0;}
+.map-ph iframe{width:100%;height:100%;min-height:450px;display:block;border:0;}
 
 /* ---- media ---- */
 .media{text-align:center;}
